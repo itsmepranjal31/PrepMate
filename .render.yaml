@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: PrepMate
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn PrepMate.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: PrepMate.settings
+      - key: SECRET_KEY
+        value: django-insecure-rojm2e_a+v2fq*l3c-i_bc(=-*7fjhl0@a2%azemd15vd9iux_
+      - key: DEBUG
+        value: False
