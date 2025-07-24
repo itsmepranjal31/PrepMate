@@ -18,5 +18,15 @@ def main():
     execute_from_command_line(sys.argv)
 
 
+# if __name__ == '__main__':
+#     main()
+
+
 if __name__ == '__main__':
-    main()
+    execute_from_command_line(sys.argv)
+
+    # Only auto-run migrate if we're on Render
+    if os.environ.get('RENDER'):
+        from django.core.management import call_command
+        call_command('migrate')
+
