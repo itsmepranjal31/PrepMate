@@ -23,10 +23,12 @@ def main():
 
 
 if __name__ == '__main__':
+    from django.core.management import execute_from_command_line
     execute_from_command_line(sys.argv)
 
-    # Only auto-run migrate if we're on Render
     if os.environ.get('RENDER'):
+        import django
+        django.setup()
         from django.core.management import call_command
         call_command('migrate')
 
