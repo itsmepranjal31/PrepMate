@@ -27,9 +27,16 @@
 
 ---
 
-| Login Page | Study Room |
-|-----------|------------|
-| ![Home](LoginPage.png) | ![Room](RoomView.png) |
+## UI Interface
+**Home Page**
+![Home](LoginPage.png) 
+
+**Room View**
+![Room](RoomView.png) 
+
+**User Profile**
+![User](UserProfile.png) 
+
 
 ---
 
@@ -40,12 +47,16 @@
    git clone https://github.com/yourusername/prepmate.git
    cd prepmate
 2. **Set up Virtual environment**
+   ```bash
    python -m venv env
    source env/bin/activate
-3. **Install dependencies**
+4. **Install dependencies**
+   ```bash
    pip install -r requirements.txt
-4. **Run migrations**
+6. **Run migrations**
+   ```bash
    python manage.py makemigrations
    python manage.py migrate
-5. **Run Server**
+8. **Run Server**
+   ```bash
    python manage.py runserver
